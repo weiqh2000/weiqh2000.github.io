@@ -36,4 +36,37 @@
         <tag>HelloWorld</tag>
       </tags>
   </entry>
+  <entry>
+    <title>vps</title>
+    <url>/2022/03/19/vps%E4%B8%80%E9%94%AEdd%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<h4 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h4><p>​    腾讯云自带的一些组件，会阻止我们DD安装操作系统（安装过程会报错，无法正确写入进磁盘），所以在DD安装操作系统前，必须要禁用、删除掉这些组件.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl stop tat_agent</span><br><span class="line">systemctl disable tat_agent</span><br><span class="line">rm -rf /etc/systemd/system/tat_agent.service</span><br><span class="line">rm -fr /usr/local/qcloud </span><br><span class="line"> </span><br><span class="line">ps -A | grep agent</span><br><span class="line"># 检查看是否还有腾讯云组件</span><br><span class="line"># kill 这个进程</span><br></pre></td></tr></table></figure>
+
+<p>​    所有腾讯云组件都删除后，就可以DD安装Linux/Windows了.    </p>
+<p>​    在使用 Centos 系统中使用 DD脚本，出现该错误</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Press any key to continue...Error! Not Found grub.</span><br></pre></td></tr></table></figure>
+
+<p>​    重装切换到 Ubuntu 系统就不会出现该错误</p>
+<ul>
+<li><h3 id="安装脚本所需的组件"><a href="#安装脚本所需的组件" class="headerlink" title="安装脚本所需的组件"></a>安装脚本所需的组件</h3></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get install -y xz-utils openssl gawk file curl wget </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用CDN下载脚本</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://cdn.jsdelivr.net/gh/hiCasper/Shell@master/AutoReinstall.sh &amp;&amp; chmod +x AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</span><br></pre></td></tr></table></figure>
+
+
+
+<p>资料来源：</p>
+<p><a href="https://www.xugo.xyz/index.php/2021/12/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F-dd-%E7%B3%BB%E7%BB%9F/">https://www.xugo.xyz/index.php/2021/12/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F-dd-%E7%B3%BB%E7%BB%9F/</a></p>
+]]></content>
+      <categories>
+        <category>vps</category>
+      </categories>
+      <tags>
+        <tag>vps</tag>
+      </tags>
+  </entry>
 </search>
