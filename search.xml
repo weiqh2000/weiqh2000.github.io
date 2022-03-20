@@ -25,74 +25,6 @@
       </tags>
   </entry>
   <entry>
-    <title>myTest</title>
-    <url>/2021/12/11/myTest/</url>
-    <content><![CDATA[<p>My first test article.</p>
-]]></content>
-      <categories>
-        <category>HelloWorld</category>
-      </categories>
-      <tags>
-        <tag>HelloWorld</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vps一键DD</title>
-    <url>/2022/03/19/vps%E4%B8%80%E9%94%AEdd%E8%84%9A%E6%9C%AC/</url>
-    <content><![CDATA[<h4 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h4><p>​    腾讯云自带的一些组件，会阻止我们DD安装操作系统（安装过程会报错，无法正确写入进磁盘），所以在DD安装操作系统前，必须要禁用、删除掉这些组件.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl stop tat_agent</span><br><span class="line">systemctl disable tat_agent</span><br><span class="line">rm -rf /etc/systemd/system/tat_agent.service</span><br><span class="line">rm -fr /usr/local/qcloud </span><br><span class="line"> </span><br><span class="line">ps -A | grep agent</span><br><span class="line"># 检查看是否还有腾讯云组件</span><br><span class="line"># kill 这个进程</span><br></pre></td></tr></table></figure>
-
-<p>​    所有腾讯云组件都删除后，就可以DD安装Linux/Windows了.    </p>
-<p>​    在使用 Centos 系统中使用 DD脚本，出现该错误</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Press any key to continue...Error! Not Found grub.</span><br></pre></td></tr></table></figure>
-
-<p>​    Centos下的 grub 是在 /boot 下的 grub2 目录下 所以无法安装成功，重装切换到 Ubuntu 系统就不会出现该错误</p>
-<p>​    腾讯云请先切换 Ubuntu 的镜像源至中科大镜像源，使用默认镜像源会导致下载缓慢</p>
-<ul>
-<li><h3 id="安装脚本所需的组件"><a href="#安装脚本所需的组件" class="headerlink" title="安装脚本所需的组件"></a>安装脚本所需的组件</h3></li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">Debian/Ubuntu</span></span><br><span class="line"></span><br><span class="line"> apt-get install -y xz-utils openssl gawk file curl wget </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">RedHat/CentOS</span></span><br><span class="line"></span><br><span class="line">yum install -y xz openssl gawk file curl wget</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h3 id="使用CDN下载脚本"><a href="#使用CDN下载脚本" class="headerlink" title="使用CDN下载脚本"></a>使用CDN下载脚本</h3></li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://cdn.jsdelivr.net/gh/hiCasper/Shell@master/AutoReinstall.sh &amp;&amp; chmod +x AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h4 id="选择系统"><a href="#选择系统" class="headerlink" title="选择系统"></a>选择系统</h4></li>
-</ul>
-<p><img src="https://github.com/weiqh2000/blogImages/blob/main/Snipaste_2022-03-19_15-41-16.jpg?raw=true" alt="Snipaste_2022-03-19_15-41-16.jpg"></p>
-<p>​    运行到这步，控制台会断开连接，之后需要到腾讯云使用VNC连接配置</p>
-<p><img src="https://github.com/weiqh2000/blogImages/blob/main/Snipaste_2022-03-19_15-47-38.jpg?raw=true" alt="Snipaste_2022-03-19_15-47-38.jpg"></p>
-<p><img src="https://github.com/weiqh2000/blogImages/blob/main/Snipaste_2022-03-19_15-50-52.jpg?raw=true" alt="Snipaste_2022-03-19_15-50-52.jpg"></p>
-<p>​    一路 Continue就好</p>
-<p><img src="https://github.com/weiqh2000/blogImages/blob/main/Snipaste_2022-03-19_15-53-03.jpg?raw=true" alt="Snipaste_2022-03-19_15-53-03.jpg"></p>
-<p>Centos </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">账号：root</span><br><span class="line">默认密码：Pwd@CentOS</span><br></pre></td></tr></table></figure>
-
-<p>其他Liunx系统</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">账号：root</span><br><span class="line">默认密码：Pwd@Linux</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-<p>资料来源：</p>
-<p><a href="https://www.2331314.xyz/295.html">https://www.2331314.xyz/295.html</a></p>
-<p><a href="https://www.xugo.xyz/index.php/2021/12/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F-dd-%E7%B3%BB%E7%BB%9F/">https://www.xugo.xyz/index.php/2021/12/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F-dd-%E7%B3%BB%E7%BB%9F/</a></p>
-]]></content>
-      <categories>
-        <category>vps</category>
-      </categories>
-      <tags>
-        <tag>vps</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nginx编译安装</title>
     <url>/2022/03/20/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="检查安装环境"><a href="#检查安装环境" class="headerlink" title="检查安装环境"></a>检查安装环境</h1><ul>
@@ -196,8 +128,76 @@
         <category>Nginx</category>
       </categories>
       <tags>
-        <tag>vps</tag>
         <tag>Nginx</tag>
+        <tag>vps</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>myTest</title>
+    <url>/2021/12/11/myTest/</url>
+    <content><![CDATA[<p>My first test article.</p>
+]]></content>
+      <categories>
+        <category>HelloWorld</category>
+      </categories>
+      <tags>
+        <tag>HelloWorld</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vps一键DD</title>
+    <url>/2022/03/19/vps%E4%B8%80%E9%94%AEdd%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<h4 id="tips"><a href="#tips" class="headerlink" title="tips:"></a>tips:</h4><p>​    腾讯云自带的一些组件，会阻止我们DD安装操作系统（安装过程会报错，无法正确写入进磁盘），所以在DD安装操作系统前，必须要禁用、删除掉这些组件.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">systemctl stop tat_agent</span><br><span class="line">systemctl disable tat_agent</span><br><span class="line">rm -rf /etc/systemd/system/tat_agent.service</span><br><span class="line">rm -fr /usr/local/qcloud </span><br><span class="line"> </span><br><span class="line">ps -A | grep agent</span><br><span class="line"># 检查看是否还有腾讯云组件</span><br><span class="line"># kill 这个进程</span><br></pre></td></tr></table></figure>
+
+<p>​    所有腾讯云组件都删除后，就可以DD安装Linux/Windows了.    </p>
+<p>​    在使用 Centos 系统中使用 DD脚本，出现该错误</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Press any key to continue...Error! Not Found grub.</span><br></pre></td></tr></table></figure>
+
+<p>​    Centos下的 grub 是在 /boot 下的 grub2 目录下 所以无法安装成功，重装切换到 Ubuntu 系统就不会出现该错误</p>
+<p>​    腾讯云请先切换 Ubuntu 的镜像源至中科大镜像源，使用默认镜像源会导致下载缓慢</p>
+<ul>
+<li><h3 id="安装脚本所需的组件"><a href="#安装脚本所需的组件" class="headerlink" title="安装脚本所需的组件"></a>安装脚本所需的组件</h3></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">Debian/Ubuntu</span></span><br><span class="line"></span><br><span class="line"> apt-get install -y xz-utils openssl gawk file curl wget </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">RedHat/CentOS</span></span><br><span class="line"></span><br><span class="line">yum install -y xz openssl gawk file curl wget</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h3 id="使用CDN下载脚本"><a href="#使用CDN下载脚本" class="headerlink" title="使用CDN下载脚本"></a>使用CDN下载脚本</h3></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://cdn.jsdelivr.net/gh/hiCasper/Shell@master/AutoReinstall.sh &amp;&amp; chmod +x AutoReinstall.sh &amp;&amp; bash AutoReinstall.sh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="选择系统"><a href="#选择系统" class="headerlink" title="选择系统"></a>选择系统</h4></li>
+</ul>
+<p><img src="https://github.com/weiqh2000/blogImages/blob/main/Snipaste_2022-03-19_15-41-16.jpg?raw=true" alt="Snipaste_2022-03-19_15-41-16.jpg"></p>
+<p>​    运行到这步，控制台会断开连接，之后需要到腾讯云使用VNC连接配置</p>
+<p><img src="https://github.com/weiqh2000/blogImages/blob/main/Snipaste_2022-03-19_15-47-38.jpg?raw=true" alt="Snipaste_2022-03-19_15-47-38.jpg"></p>
+<p><img src="https://github.com/weiqh2000/blogImages/blob/main/Snipaste_2022-03-19_15-50-52.jpg?raw=true" alt="Snipaste_2022-03-19_15-50-52.jpg"></p>
+<p>​    一路 Continue就好</p>
+<p><img src="https://github.com/weiqh2000/blogImages/blob/main/Snipaste_2022-03-19_15-53-03.jpg?raw=true" alt="Snipaste_2022-03-19_15-53-03.jpg"></p>
+<p>Centos </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">账号：root</span><br><span class="line">默认密码：Pwd@CentOS</span><br></pre></td></tr></table></figure>
+
+<p>其他Liunx系统</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">账号：root</span><br><span class="line">默认密码：Pwd@Linux</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<p>资料来源：</p>
+<p><a href="https://www.2331314.xyz/295.html">https://www.2331314.xyz/295.html</a></p>
+<p><a href="https://www.xugo.xyz/index.php/2021/12/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F-dd-%E7%B3%BB%E7%BB%9F/">https://www.xugo.xyz/index.php/2021/12/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F-dd-%E7%B3%BB%E7%BB%9F/</a></p>
+]]></content>
+      <categories>
+        <category>vps</category>
+      </categories>
+      <tags>
+        <tag>vps</tag>
       </tags>
   </entry>
 </search>
