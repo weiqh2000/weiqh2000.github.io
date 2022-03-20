@@ -29,14 +29,14 @@
     <url>/2022/03/20/Nginx%E7%BC%96%E8%AF%91%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="检查安装环境"><a href="#检查安装环境" class="headerlink" title="检查安装环境"></a>检查安装环境</h1><ul>
 <li><p>我们在安装不同的工具软件的时候，需要安装插件的环境关系</p>
-<p>​        检查系统版本：cat /etc/redhat-release</p>
-<p>​        查看是否已安装wget: rpm -qa|wget</p>
+<p>​        检查系统版本：<code>cat /etc/redhat-release</code></p>
+<p>​        查看是否已安装<code>wget: rpm -qa|wget</code></p>
 <p>​        (注： Linux系统中的wget是一个下载文件的工具)</p>
 </li>
-<li><p>​    否则（结果显示空白）安装：yum -y install wget</p>
+<li><p>​    否则（结果显示空白）安装：<code>yum -y install wget</code></p>
 <p>​        安装g编译器：默认的云服务器都是会安装的。</p>
-<p>​        查看是否已安装编译器：rpm -qa|gcc</p>
-<p>​        否则（结果显示空白）安装：yum -y install gcc gcc-c++</p>
+<p>​        查看是否已安装编译器：<code>rpm -qa|gcc</code></p>
+<p>​        否则（结果显示空白）安装：<code>yum -y install gcc gcc-c++</code></p>
 </li>
 <li><p>为什么要装gcc编译器？</p>
 <p>​    gcc是c语言编译器<br>​    而我们的nginx的编码语言就是c语言</p>
@@ -48,11 +48,11 @@
 <p>yum -y install pcre pcre-devel</p>
 </li>
 <li><p>nginx的各种模块中需要使用gzip压缩：</p>
-<p>yum -y install zlib zlib-devel</p>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum -y install zlib zlib-devel</span><br></pre></td></tr></table></figure></li>
 <li><p>安全套接字层密码库</p>
-<p>yum -y install openssl openssI-devel</p>
-</li>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum -y install openssl openssI-devel</span><br></pre></td></tr></table></figure>
+
+<h2 id="全部依赖："><a href="#全部依赖：" class="headerlink" title="全部依赖："></a>全部依赖：</h2></li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum install gcc gcc-c++ make unzip pcre pcre-devel zlib zlib-devel libxml2 libxml2-devel  readline readline-devel ncurses ncurses-devel perl-devel perl-ExtUtils-Embed openssl-devel -y</span><br></pre></td></tr></table></figure>
 
@@ -60,11 +60,12 @@
 <li>下载 nginx</li>
 </ol>
 <p>​    wget <a href="http://nginx.org/download/nginx-1.14.0.tar.gz">http://nginx.org/download/nginx-1.14.0.tar.gz</a> 或者下载好直接上传</p>
-<p>​    解压：tar-zxvf nginx-1.14.0.tar.gz</p>
+<p>​    解压：<code>tar-zxvf nginx-1.14.0.tar.gz</code></p>
 <ol start="2">
 <li>解压nginx</li>
 </ol>
-<p>cd nginx-1.14.0</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd nginx-1.14.0</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://github.com/weiqh2000/blogImages/blob/main/20220320122137.png?raw=true" alt="20220320122137.png"></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/src/nginx --with-http_ssl_module --with-http_stub_status_module --with-pcre --with-http_spdy_module</span><br></pre></td></tr></table></figure>
 
@@ -99,6 +100,7 @@
 <li><p>启动nginx</p>
 <p>systemctl start nginx</p>
 <p>如果出现</p>
+<p><img src="https://github.com/weiqh2000/blogImages/blob/main/20220320124604.png?raw=true" alt="20220320124604.png"></p>
 <p>那么输入</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line"></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 
