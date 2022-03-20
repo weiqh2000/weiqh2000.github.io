@@ -51,7 +51,7 @@
 <ul>
 <li><h3 id="安装脚本所需的组件"><a href="#安装脚本所需的组件" class="headerlink" title="安装脚本所需的组件"></a>安装脚本所需的组件</h3></li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apt-get install -y xz-utils openssl gawk file curl wget </span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">Debian/Ubuntu</span></span><br><span class="line"></span><br><span class="line"> apt-get install -y xz-utils openssl gawk file curl wget </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">RedHat/CentOS</span></span><br><span class="line"></span><br><span class="line">yum install -y xz openssl gawk file curl wget</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li><h3 id="使用CDN下载脚本"><a href="#使用CDN下载脚本" class="headerlink" title="使用CDN下载脚本"></a>使用CDN下载脚本</h3></li>
@@ -82,6 +82,7 @@
 
 
 <p>资料来源：</p>
+<p><a href="https://www.2331314.xyz/295.html">https://www.2331314.xyz/295.html</a></p>
 <p><a href="https://www.xugo.xyz/index.php/2021/12/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F-dd-%E7%B3%BB%E7%BB%9F/">https://www.xugo.xyz/index.php/2021/12/11/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%9B%BD%E5%86%85%E8%BD%BB%E9%87%8F-dd-%E7%B3%BB%E7%BB%9F/</a></p>
 ]]></content>
       <categories>
