@@ -160,8 +160,7 @@
   <entry>
     <title>MySql百题心得</title>
     <url>/2022/04/07/mysql%E7%99%BE%E9%A2%98%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<p>##知识点补充</p>
-<center>SQL的思想</center>
+    <content><![CDATA[<h2 id="知识点补充"><a href="#知识点补充" class="headerlink" title="知识点补充"></a>知识点补充</h2><center>SQL的思想</center>
 
 <center>面向集合的思想</center>
 
