@@ -138,7 +138,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mkdir -p /etc/docker</span><br><span class="line">tee /etc/docker/daemon.json &lt;&lt;-&#x27;EOF&#x27;</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [&quot;https://docker.mirrors.ustc.edu.cn&quot;]</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
 
 <p>查看Docker的GitHub列表目录</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker search [想查看的Docker应用]</span><br><span class="line">例：</span><br><span class="line">	[root@server ~]# docker search python</span><br><span class="line">NAME                                     DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED</span><br><span class="line">python                                   Python is an interpreted, interactive, objec…   7701      [OK]       </span><br><span class="line">pypy                                     PyPy is a fast, compliant alternative implem…   330       [OK]       </span><br><span class="line">circleci/python                          Python is an interpreted, interactive, objec…   51                   </span><br><span class="line">hylang                                   Hy is a Lisp dialect that translates express…   45        [OK]       </span><br><span class="line">bitnami/python                           Bitnami Python Docker Image                     22                   [OK]</span><br><span class="line">cimg/python                                                                              5                    </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker search [想查看的Docker应用]</span><br><span class="line">例：</span><br><span class="line">	[root@server ~]# docker search python</span><br><span class="line">  NAME                                     DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED</span><br><span class="line">  python                                   Python is an interpreted, interactive, objec…   7701      [OK]       </span><br><span class="line">  pypy                                     PyPy is a fast, compliant alternative implem…   330       [OK]       </span><br><span class="line">  circleci/python                          Python is an interpreted, interactive, objec…   51                   </span><br><span class="line">  hylang                                   Hy is a Lisp dialect that translates express…   45        [OK]       </span><br><span class="line">  bitnami/python                           Bitnami Python Docker Image                     22                   [OK]</span><br><span class="line">  cimg/python                                                                              5                    </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -146,6 +146,18 @@
       </categories>
       <tags>
         <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>myTest</title>
+    <url>/2021/12/11/myTest/</url>
+    <content><![CDATA[<p>My first test article.</p>
+]]></content>
+      <categories>
+        <category>HelloWorld</category>
+      </categories>
+      <tags>
+        <tag>HelloWorld</tag>
       </tags>
   </entry>
   <entry>
@@ -164,18 +176,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>HelloWorld</category>
-      </categories>
-      <tags>
-        <tag>HelloWorld</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>myTest</title>
-    <url>/2021/12/11/myTest/</url>
-    <content><![CDATA[<p>My first test article.</p>
 ]]></content>
       <categories>
         <category>HelloWorld</category>
